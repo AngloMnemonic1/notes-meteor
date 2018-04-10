@@ -1,0 +1,59 @@
+.button {
+  background-color: $button-bg;
+  border: none;
+  color: $button-forcolour;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $base-font-size;
+  line-height: 1.2;
+  margin-bottom: $space;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  //padding: 1.5rem 0.8rem;
+}
+.button-pill {
+  background-color: transparent;
+  border: 1px solid $button-pill-colour;
+  color: $button-pill-colour;
+  margin: 0 ($space / 2) 0 0;
+  padding: 0.2rem 0.8rem;
+
+}
+.button-item {
+  display: flex;
+  justify-content: flex-end;
+  //margin-right: 10px
+  //align-items: center;
+
+}
+.button-secondary {
+  background-color: $button-secondary-bg;
+  border: 1px solid $button-secondary-bordercolour;
+  color: $button-secondary-colour;
+}
+.button-logout {
+  background-color: transparent;
+  border: 0;
+  color: $button-forcolour;
+  cursor: pointer;
+  //float: right;
+  font-size: $base-font-size;
+  margin-left:auto;
+  margin-right:10rem;
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+.button-linktext {
+  background-color: transparent;
+  margin:0;
+  padding: 0;
+  text-decoration: underline;
+  text-transform: lowercase;
+
+}

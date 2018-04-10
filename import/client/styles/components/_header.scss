@@ -1,0 +1,18 @@
+.header {
+  background-color: $header-bg;
+  color: $header-forcolour;
+  //display: flex;  // enable flex boxed
+  //flex-direction: row;
+  //margin-bottom: 1rem;
+  //padding-left: 40px;
+}
+.header-content {
+  display: flex;  // enable flex boxed
+  justify-content: space-between;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: $space;
+}
+.header-title {
+  margin: 0;
+}

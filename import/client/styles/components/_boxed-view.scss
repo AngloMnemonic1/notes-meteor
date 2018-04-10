@@ -1,0 +1,36 @@
+.boxed-view {
+  //----- display flew
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //--------------------
+  background: $boxed-view-overlay-bg;
+  height: 100vh;  //view port height full browser height
+  width: 100vw;  //view port width full browser width
+}
+.boxed-view-modal {
+  background: fade-out($boxed-view-overlay-bg, 0.3);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.boxed-view-box {
+  background-color: $boxed-view-bg;
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+
+  padding: 2.4rem;
+  text-align: center;
+  width: 30rem;
+}
+
+.boxed-view-form {
+  display: flex;  // enable flex boxed
+  flex-direction: column;
+
+}
