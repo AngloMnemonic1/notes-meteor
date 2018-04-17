@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'; // ES6
 
 import { Link } from 'react-router-dom';
 
-import { IsAuth } from './IsAuth'
+import { IsAuth } from './IsAuth';
 
 
 export default class Login extends React.Component {

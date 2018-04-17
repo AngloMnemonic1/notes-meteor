@@ -2,13 +2,13 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 //import { Accounts } from 'meteor/accounts-base'
 import PropTypes from 'prop-types'; // ES6
-import { IsAuth } from './IsAuth'
+import { IsAuth } from './IsAuth';
 import PrivateHeader from './components/PrivateHeader';
-
+import NoteList from './components/NoteList';
 
 //import { Link } from 'react-router-dom';
 //import { withRouter } from 'react-router-dom'
-//import PropTypes from 'prop-types';
+
 
 export default class Dashboard extends React.Component {
   constructor(props){
@@ -27,12 +27,14 @@ export default class Dashboard extends React.Component {
       <div>
          <PrivateHeader title = "Dashboard" history = {this.props.history} />
          <div className = "page-content">
-           Dashboard page content
+           <NoteList/>
          </div>
       </div>
     )
   }
 
+
+//<NoteList/>
 
 
 } //end class

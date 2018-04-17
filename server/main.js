@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import {Accounts} from 'meteor/accounts-base';
 import SimpleSchema from 'simpl-schema';
+
+import '../import/api/notes';
 import '../import/startup/simple-schema-config.js';
 
 Meteor.startup(() => {
