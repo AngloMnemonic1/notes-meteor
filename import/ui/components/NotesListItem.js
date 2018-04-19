@@ -2,22 +2,42 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types'; // ES6
 
-const NoteListItem = (props) => {
 
-  return (
-    <div>
-      <h5>
-        { props.note.title || 'Untitled note' }
-        <p>
-          { moment(props.note.udatedAt).format('DD/M/YY')}
-        </p>
-      </h5>
-    </div>
+export default class NoteListItem extends React.Component {
+//const NoteListItem = (props) => {
+  constructor(props) {
+      super(props);
+      this.state = {
+        selectedNoteId: ''
+      };
+  }
 
-  )
+  shouldComponentUpdate() {
+    console.log('update', this.props.note);
+    return true;
 
-};
-export default NoteListItem;
+  }
+
+  render(){
+    return (
+      <div onClick = { this.onClickMe.bind(this)  }>
+        <h5>
+          { this.props.note.title || 'Untitled note' }
+          <p>
+            { moment(this.props.note.udatedAt).format('DD/M/YY')}
+          </p>
+        </h5>
+      </div>
+
+    );
+  }
+
+  onClickMe(){
+      this.setState({selectedNoteId: this.props.note._id });
+  }
+
+}
+
 
 NoteListItem.propTypes = {
   note: PropTypes.object.isRequired

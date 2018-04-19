@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+
 import React from 'react';
 //import { Accounts } from 'meteor/accounts-base'
 import PropTypes from 'prop-types'; // ES6
@@ -19,6 +20,7 @@ export default class Dashboard extends React.Component {
       if (firePush.EnterPrivatePageAuth){
         this.props.history.replace('/');
       }
+
       //console.log("Links",this.props);
    }
 

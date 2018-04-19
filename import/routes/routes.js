@@ -16,6 +16,7 @@ export const routes = (
         <Route exact path="/" component={Login} />*/}
         <Route path = "/signup" component = {Signup} />
         <Route path = "/dashboard" render = {props => < Dashboard {...props} />} />
+        <Route path = "/dashboard/:id" render = {props => < Dashboard {...props} />} />
         {/*<PrivateRoute path="/link" authed={!!Meteor.userId()} redirectTo="/" component={clsLink}/>
         <Route path = "/signup" component = {Signup} onEnter = {onEnterPublicPage}/>
         <Route path = "/link" component = {clsLink} onEnter = {onEnterPrivatePage}/>

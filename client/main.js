@@ -1,13 +1,14 @@
 import {Meteor} from 'meteor/meteor';
+
 //import { Tracker } from 'meteor/tracker';
-//import { ReactiveDict } from 'meteor/reactive-dict';
+import { ReactiveDict } from 'meteor/reactive-dict';
 import ReactDOM from 'react-dom';
 import { routes } from '../import/routes/routes';
 import '../import/startup/simple-schema-config.js';
 
+var sessionDict = new ReactiveDict('sessionDict');
 
-//const sessionDict = new ReactiveDict();
-//sessionDict.set('name', 'Steve');
+
 
 //NOTE Session - only in client re renders on change
 //Tracker.autorun( () => {
@@ -18,6 +19,7 @@ import '../import/startup/simple-schema-config.js';
 
 Meteor.startup(() => {
 
+  sessionDict.set('selectedNoteId', undefined);
   ReactDOM.render(routes, document.getElementById('app'));
 
 
