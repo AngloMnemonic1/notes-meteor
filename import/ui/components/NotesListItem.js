@@ -13,7 +13,7 @@ export default class NoteListItem extends React.Component {
   }
 
   shouldComponentUpdate() {
-    console.log('update', this.props.note);
+    console.log('update', this.props);
     return true;
 
   }
@@ -25,7 +25,10 @@ export default class NoteListItem extends React.Component {
           { this.props.note.title || 'Untitled note' }
           <p>
             { moment(this.props.note.udatedAt).format('DD/M/YY')}
+            { this.IsItSelected() }
+
           </p>
+
         </h5>
       </div>
 
@@ -33,12 +36,28 @@ export default class NoteListItem extends React.Component {
   }
 
   onClickMe(){
-      this.setState({selectedNoteId: this.props.note._id });
+      //this.setState({selectedNoteId: this.props.note._id });
+      this.props.history.replace('/dashboard/');
+      console.log('update', this.props);
+  }
+
+  IsItSelected() {
+    //this.props.history.replace('/dashboard/');
+    //if (this.state.selectedNoteId == this.props.note._id) {
+
+    //  return('Selected')
+
+    //} else {
+    //  undefined;
+    //}
+
   }
 
 }
 
 
 NoteListItem.propTypes = {
-  note: PropTypes.object.isRequired
+  note: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+
 };

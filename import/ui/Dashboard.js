@@ -29,14 +29,14 @@ export default class Dashboard extends React.Component {
       <div>
          <PrivateHeader title = "Dashboard" history = {this.props.history} />
          <div className = "page-content">
-           <NoteList/>
+           <NoteList props = {this.props}/>
          </div>
       </div>
     )
   }
 
 
-//<NoteList/>
+//<NoteList history = {this.props.history} props = {this.props}/>
 
 
 } //end class
