@@ -47,25 +47,26 @@ export default class NoteList extends React.Component {
   }
 
 
+
   render(){
     return(
       <div>
-
-        {this.renderNoteItems()}
         <NoteListHeader/>
+        {this.renderNoteItems()}
+
       </div>
     )
   }
 
   renderNoteItems(){
     if (this.state.notes.length == 0){
-          console.log('no items ',this.state.notes.length);
+          //console.log('no items ',this.state.notes.length);
           return (
               <NoteListEmptyItem/>
           );
     }
-    console.log('state ',this.state);
-      console.log('state ',this.props);
+    //console.log('state ',this.state);
+      //console.log('props ',this.props);
     //we have items to NoteList
 
     return this.state.notes.map( (note) => {
@@ -91,9 +92,9 @@ export default class NoteList extends React.Component {
   onClickMe(noteId){
       this.setState({selectedNoteId: noteId });
       store.set('storedNoteId', noteId);
-      //this.props.history.replace('/dashboard/');
-      console.log('selectedNoteId', noteId);
-      console.log('storedNoteId', store.get('storedNoteId'));
+      this.props.history.replace('/dashboard/');
+      //console.log('props', this.props);
+      //console.log('storedNoteId', store.get('storedNoteId'));
   }
 
   IsItSelected(noteId) {

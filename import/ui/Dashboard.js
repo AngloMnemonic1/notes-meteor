@@ -6,7 +6,8 @@ import PropTypes from 'prop-types'; // ES6
 import { IsAuth } from './IsAuth';
 import PrivateHeader from './components/PrivateHeader';
 import NoteList from './components/NoteList';
-
+//import Editor from './components/Editor';
+import Editor2 from './components/Editor2';
 //import { Link } from 'react-router-dom';
 //import { withRouter } from 'react-router-dom'
 
@@ -29,7 +30,8 @@ export default class Dashboard extends React.Component {
       <div>
          <PrivateHeader title = "Dashboard" history = {this.props.history} />
          <div className = "page-content">
-           <NoteList props = {this.props}/>
+           <NoteList history = {this.props.history}/>
+           <Editor2 history = {this.props.history}/>
          </div>
       </div>
     )
