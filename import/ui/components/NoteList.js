@@ -43,7 +43,7 @@ export default class NoteList extends React.Component {
 
   componentWillUnmount() {
     this.NotesTracker.stop();
-    Meteor.unsubscribe('notes');
+    //Meteor.unsubscribe('notes');
   }
 
 

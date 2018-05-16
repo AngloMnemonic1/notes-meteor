@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accounts } from 'meteor/accounts-base'
 import PropTypes from 'prop-types'; // ES6
+import store from 'store'
 
 //NOTE Stateless function component
 const PrivateHeader = (props) => {
@@ -14,6 +15,7 @@ const PrivateHeader = (props) => {
           props.history.replace('/');
         }
       });
+      store.set('storedNoteId', undefined);
     } // end On logout
 
     return (
