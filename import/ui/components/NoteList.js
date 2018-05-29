@@ -31,7 +31,9 @@ export default class NoteList extends React.Component {
       () => {
         //NOTE subscription
         Meteor.subscribe('notes');
-        const dbCollection = Notes.find().fetch();
+        const dbCollection = Notes.find({},{
+          sort: { updateAt: -1 }
+        }).fetch();
         //console.log('dbCollection ', dbCollection);
         this.setState({notes: dbCollection});
       }
