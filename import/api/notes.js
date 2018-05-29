@@ -46,6 +46,7 @@ Meteor.methods({
     });
 
   },
+
   'notes.update'(_id, updates){ // eslint-disable-line meteor/audit-argument-checks
     if (!this.userId){
       throw new Meteor.Error('not-authorised to delete');

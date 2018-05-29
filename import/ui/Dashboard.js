@@ -7,7 +7,7 @@ import { IsAuth } from './IsAuth';
 import PrivateHeader from './components/PrivateHeader';
 import NoteList from './components/NoteList';
 //import Editor from './components/Editor';
-import Editor2 from './components/Editor2';
+import Editor3 from './components/Editor3';
 //import { Link } from 'react-router-dom';
 //import { withRouter } from 'react-router-dom'
 
@@ -31,7 +31,7 @@ export default class Dashboard extends React.Component {
          <PrivateHeader title = "Dashboard" history = {this.props.history} />
          <div className = "page-content">
            <NoteList history = {this.props.history}/>
-           <Editor2 history = {this.props.history}/>
+           <Editor3 history = {this.props.history}/>
          </div>
       </div>
     )

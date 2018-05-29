@@ -18,7 +18,8 @@ export default class NoteList extends React.Component {
 
     this.state = {
       selectedNoteId: '',
-      notes: []
+      notes: [],
+      clickedItem: false,
     };
   }
 
@@ -46,7 +47,20 @@ export default class NoteList extends React.Component {
     //Meteor.unsubscribe('notes');
   }
 
+  shouldComponentUpdate(){
+    console.log('shouldComponentUpdateList', store.get('refreshPage'));
+    if (this.state.selectedNoteId == store.get('storedNoteId')) {
+      return false;
+    }
+    if (store.get('refreshPage')){
+      store.set('refreshPage', false);
+      this.props.history.replace('/dashboard/');
+      return false;
+    }
+    //this.props.history.replace('/dashboard/');
+    return true;
 
+  }
 
   render(){
     return(
@@ -90,9 +104,11 @@ export default class NoteList extends React.Component {
   }
 
   onClickMe(noteId){
-      this.setState({selectedNoteId: noteId });
+      this.setState({selectedNoteId: noteId,
+      clickedItem: true, });
       store.set('storedNoteId', noteId);
       this.props.history.replace('/dashboard/');
+
       //console.log('props', this.props);
       //console.log('storedNoteId', store.get('storedNoteId'));
   }

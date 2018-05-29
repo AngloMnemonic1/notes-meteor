@@ -46,7 +46,7 @@ export default class Editor extends TrackerReact(React.Component) {
       selectedNoteId: selectedNoteId,
       note: [],
       numCharTitle: 20,
-      isLoaded: false
+      isLoaded: false    
     };
   }
 
@@ -81,7 +81,7 @@ export default class Editor extends TrackerReact(React.Component) {
    render(){
      const noteView = this.getNote();
      if (noteView) {
-       console.log("Render ",this.state.selectedNoteId,noteView.title,noteView.body );
+       console.log("Render ",this.state.selectedNoteId, noteView.title, noteView.body );
        //when there is a note
        return (
          <div>
