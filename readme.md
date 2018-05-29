@@ -1,4 +1,4 @@
-# Boiler plate 1 project
-Basic React and authorisation setup
+# Notes project
+Setup a note taking app
 ## Author
-S.T.Brookes
+Mr S.T.Brookes
